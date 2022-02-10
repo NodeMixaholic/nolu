@@ -1,11 +1,8 @@
 const request = require("request");
 const cheerio = require('cheerio');
-//require process
 const process = require('process');
-//https://pluto.tv/en/search
 //require puppeteer
 const puppeteer = require('puppeteer');
-//search https://pluto.tv/en/search via puppeteer
 let resultsFinal = [];
 const searchPluto = async (searchTerm) => {
     const browser = await puppeteer.launch();
