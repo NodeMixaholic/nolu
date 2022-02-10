@@ -32,7 +32,7 @@ const searchYT = async (searchTerm) => {
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0);
     let st = searchTerm.replace(/ /g, "+");
-    await page.goto(`https://www.youtube.com/results?search_query=${st}+full+movie`);
+    await page.goto(`https://www.youtube.com/results?search_query=${st}+full`);
     await new Promise(r => setTimeout(r, 2000));
     const result = await page.evaluate(searchTerm => {
         let results = [];
